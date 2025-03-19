@@ -3,11 +3,10 @@ body{
     margin: 0;
     padding: 0;
     background: #d1d1d1;
+    overflow: hidden;
 }
 
 #wrapper{
-    width: 1000px;
-    margin: 50px auto 0;
     background-color: #fff;
 }
 
@@ -15,6 +14,8 @@ body{
     text-align: center;
     background-color: #1abc9c;
     padding: 10px;
+    position: fixed;
+    width: 100%;
 }
 
 #header h1{
@@ -54,8 +55,12 @@ body{
 }
 
 #main-content{
-     padding: 25px;
+    padding: 0 25px;
+    padding: 25px;
     min-height: 400px;
+    margin-top: 15px;
+    overflow-y: auto;
+    height: 88vh;
 }
 #main-content h2{
     margin: 0 0 10px;
@@ -167,4 +172,47 @@ body{
 
 #main-content .pagination li a:hover{
     background-color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease-in-out;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
 }
