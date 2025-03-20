@@ -16,7 +16,10 @@ include 'DB_conn.php';
 $sql = "UPDATE employee SET name = '{$name}',designation = '{$designation}', birthDate = '{$birthDate}', joinDate = '{$joinDate}',addr1 = '{$addr1}',addr2 = '{$addr2}',city ='{$city}',state = '{$state}' WHERE empCode = '{$empCode}'";
 $result = mysqli_query($conn , $sql) or die("Query Unsucessfull");
 
-header("Location:http://localhost/crud/index.php");
+//header("Location:http://localhost/crud/index.php");
+header("Location: index.php");
+exit();
+
 
 mysqli_close($conn);
 
